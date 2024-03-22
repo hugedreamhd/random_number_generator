@@ -23,7 +23,7 @@ class _SettingScreenState extends State<SettingScreen> {
             children: [
               _Body(maxNumber: maxNumber),
               _Footer(
-                onButtonPressed: ,
+                onButtonPressed: onButtonPressed,
                 onSliderChanged: OnSliderChanded,
                 maxNumber: maxNumber,
               )
@@ -42,9 +42,9 @@ class _SettingScreenState extends State<SettingScreen> {
   }
 
   void onButtonPressed() {
-            Navigator.of(context).pop(maxNumber
-                .toInt()); //뒷 페이지로 가는것, parameter 값으로 maxNumber를 Toint값으로 변경해서 넘겨주고 있음
-          }
+    Navigator.of(context).pop(maxNumber
+        .toInt()); //뒷 페이지로 가는것, parameter 값으로 maxNumber를 Toint값으로 변경해서 넘겨주고 있음
+  }
 }
 
 class _Body extends StatelessWidget {
