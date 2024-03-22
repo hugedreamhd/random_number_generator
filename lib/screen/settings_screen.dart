@@ -14,7 +14,16 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  double maxNumber = 1000;
+  double maxNumber =
+      1000; //widget. 이란 키워드를 가져올수 없다 왜? 스테이트가 생성이 되기 전에 stateful위젯에 붙기 전에 설정이 완료된다
+
+  @override
+  void initState() {
+    //_SettingsScreen이 재생성 되는 순간에 initState가 다시 실행된다
+    super.initState();
+
+    maxNumber - widget.maxNumber.toDouble();
+  }
 
   @override
   Widget build(BuildContext context) {
