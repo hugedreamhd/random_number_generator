@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:random_number_generator/constant/color.dart';
 
 class SettingScreen extends StatefulWidget {
-  const SettingScreen({super.key});
+  final int maxNumber;
+
+  const SettingScreen({
+    required this.maxNumber,
+    super.key,
+  });
 
   @override
   State<SettingScreen> createState() => _SettingScreenState();

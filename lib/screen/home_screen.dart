@@ -53,7 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
       //<int> 제너릭 int라고 하면 result가 int값을 받는다고 인식
       MaterialPageRoute(
         builder: (BuildContext context) {
-          return SettingScreen();
+          return SettingScreen(
+            maxNumber: maxNumber,
+          );
         },
       ),
     );
